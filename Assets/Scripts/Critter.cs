@@ -7,6 +7,8 @@ public class Critter : MonoBehaviour {
     public Vector2 lowerRange;
     public Vector2 upperRange;
 
+    public Score scoreDisplay;
+
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,7 @@ public class Critter : MonoBehaviour {
     //Unity calls this when game object is clicked
     void OnMouseDown()
     {
+        scoreDisplay.ChangeValue(1);
         Destroy(gameObject);
     }
 }
